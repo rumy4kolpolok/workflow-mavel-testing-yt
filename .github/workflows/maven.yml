@@ -52,6 +52,7 @@ jobs:
           -Dtest=${{inputs.testname}}
           -Dbrowser=${{inputs.browsername}}
           -DenableBrowserOptions=true -Dmaven.test.failure.ignore=true
+          mvn test -Dtest=testCases.TestProductItems
       - name: archive artifact
         uses: actions/upload-artifact@v3
         with:
